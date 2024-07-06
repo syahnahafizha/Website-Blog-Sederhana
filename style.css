@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Quicksand:wght@400;500&display=swap');
+
+*, *::before, *::after { /*gar element-element tersebut dapat memiliki ukuran dimensi yang sama meskipun memiliki ukuran padding, margin, dan border.*/
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    display: inline;    
+}
+
+header img {
+    width: 200px;
+}
+
+img {
+    object-fit: cover;
+}
+
+header ul {
+    padding: 1.5rem;
+    margin: auto;
+    background-color: rgb(87, 47, 50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav {
+    padding: 0;
+    top: 0;
+    position: sticky;
+}
+
+nav ul {
+    padding-inline: 4rem; /*sama seperti padding biasa tetapi padding ini akan memberikan space jarak secara horizontal*/
+    display: flex; /*tampilan display akan sama akan tetapi display sudah bernilai flex (flexibel) sehingga memungkinkan untuk pengaturan layout yang lebih dinamis*/
+    gap: 2rem; /*untuk memerikan jarak pada elemen, sehingga tidak diperlukan margin lagi pada selector nav li*/
+}
+
+nav li {
+    /*hapus properti display : inline dikarenakan flexbox memiliki kendali untuk mengatur layout dalam satu dimensi (horizontal atau vertikal) sehingga jika diterapkan display inline atau display block, tidak akan memengaruhi flex items sama sekali*/
+    list-style-type: none; /*menentukan urutan list nya mau pakai apa (menghapus list), contohnya huruf romawi : I, II, III*/
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none; /*memberikan dekorasi garis pada text*/
+    color: white;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    overflow: auto; /*overflow digunakan ketika konten melebihi batas yang diinginkan*/
+    display: flex; /*mengubah display menjadi flexbox*/
+    gap: 1.5rem; /*akan memberikan jarak pada layout*/
+    flex-flow: column nowrap;
+    width: 700px;
+	margin: auto;
+	background-color: rgb(255, 255, 255);
+}
+
+main img {
+    width: 200px;
+}
+
+p {
+    text-align: justify;
+}
+
+article li{
+    list-style-type: none; 
+}
+
+aside {
+    flex: 1; /*menghapus seluruh properti dikarenakan tidak menggunakan float lagi*/
+}
+
+.card { /*mengatur border*/
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px; /*memberikan ujung kotak radius sehingga tidak runcing*/
+  padding: 20px;
+  margin-top: 20px;
+}
+
+footer {
+    padding: 1.5rem;
+    margin: auto;
+    background-color: rgb(87, 47, 50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    color: white;
+}
+
+footer img {
+    width: 200px;
+}
+
+footer li {
+    list-style-type: none; 
+}
+
+footer .social-media li {
+    font-size: 1.5rem;
+}
+
+footer .social-media li a:hover {
+    color: #89b0d9;
+}
